@@ -1,0 +1,96 @@
+/* Blood Bank Specific Styles */
+:root {
+    --blood-red: #ff0000;  /* Red as primary */
+    --blood-gold: #d4af37;  /* Gold as secondary */
+    --blood-black: #000000;  /* Black as primary */
+    --blood-dark: #330000;  /* Dark red */
+    --blood-light: #ffffff;  /* White */
+}
+
+.blood-bank-hero {
+    background: linear-gradient(120deg, #ff0000 30%, #000000 70%), url('../images/blood-bank-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    color: var(--blood-gold);
+}
+
+.donor-card {
+    transition: all 0.3s;
+    border-left: 4px solid var(--blood-red);
+    background-color: var(--blood-black);
+    color: var(--blood-gold);
+}
+
+.donor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(204, 0, 0, 0.1);
+}
+
+.blood-type {
+    font-weight: bold;
+    color: var(--blood-red);
+}
+
+.eligibility-badge {
+    background-color: var(--blood-light);
+    color: var(--blood-black);
+}
+
+.btn-register {
+    background-color: var(--blood-red);
+    color: var(--blood-gold);
+}
+
+.btn-register:hover {
+    background-color: var(--blood-black);
+    color: var(--blood-gold);
+}
+
+/* Eligibility Requirements Section */
+.eligibility-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.eligibility-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.eligibility-list li:before {
+    content: "✓";
+    color: var(--blood-red);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Form Validation */
+.is-invalid {
+    border-color: var(--blood-red) !important;
+}
+
+.invalid-feedback {
+    color: var(--blood-red);
+}
+
+/* Success Message */
+.registration-success {
+    background-color: var(--blood-light);
+    border-left: 4px solid var(--blood-red);
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .blood-bank-hero {
+        min-height: 40vh;
+    }
+    .blood-bank-hero h1 {
+        font-size: 2.5rem;
+    }
+}

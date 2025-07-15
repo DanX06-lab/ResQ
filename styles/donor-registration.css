@@ -1,0 +1,60 @@
+/* Donor Registration Styles */
+:root {
+    --donor-red: #cc0000;
+    --donor-dark: #330000;
+    --donor-light: #ffe6e6;
+    --donor-gold: #d4af37;
+}
+
+.donor-register-hero {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../images/donor-register-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+    color: white;
+}
+
+#donor-registration-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn-register {
+    background-color: var(--donor-red);
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+    border: none;
+}
+
+.btn-register:hover {
+    background-color: var(--donor-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Form Elements */
+.form-control, .form-select {
+    border: 1px solid var(--donor-gold);
+}
+
+/* Eligibility Check */
+.form-check-input:checked {
+    background-color: var(--donor-red);
+    border-color: var(--donor-red);
+}
+
+/* Footer Specific */
+.donor-footer {
+    border-top: 2px solid var(--donor-gold);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .donor-register-hero {
+        min-height: 40vh;
+    }
+    .donor-register-hero h1 {
+        font-size: 2.5rem;
+    }
+}

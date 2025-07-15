@@ -1,0 +1,130 @@
+:root {
+    --primary: #000000;  /* Black as primary */
+    --primary-accent: #d4af37;  /* Gold accent */
+    --secondary: #e63946;  /* Red for emergency */
+    --secondary-accent: #ffffff;  /* White sparingly */
+    --bg-dark: #121212;  /* Dark background */
+    --text-primary: #d4af37;  /* Gold text */
+    --text-secondary: #aaaaaa;  /* Light gray */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('../hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 70vh;
+    color: var(--primary-accent);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.emergency-btn {
+    background-color: var(--secondary);
+    color: var(--secondary-accent);
+    border: 2px solid var(--primary-accent);
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.emergency-btn:hover {
+    background-color: var(--primary-accent);
+    color: var(--primary);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-accent);
+}
+
+/* Navigation */
+.navbar {
+    padding: 1rem 0;
+    background-color: var(--primary) !important;
+    border-bottom: 2px solid var(--primary-accent);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: var(--primary-accent) !important;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: var(--text-secondary) !important;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary-accent) !important;
+    text-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+}
+
+/* Features Section */
+.card {
+    transition: transform 0.3s;
+    background-color: var(--primary);
+    border: 1px solid var(--primary-accent);
+    color: var(--text-secondary);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h5 {
+    color: var(--primary-accent);
+}
+
+/* Emergency Section */
+.emergency-service {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.emergency-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.bg-danger {
+    background-color: var(--secondary) !important;
+}
+
+/* Form Elements */
+.form-control, .form-select {
+    background-color: #1a1a1a;
+    border: 1px solid var(--primary-accent);
+    color: var(--text-secondary);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary);
+    border-top: 2px solid var(--primary-accent);
+    color: var(--text-secondary);
+}
+
+footer a {
+    color: var(--text-secondary);
+    transition: all 0.3s;
+}
+
+footer a:hover {
+    color: var(--primary-accent);
+    text-decoration: none;
+}

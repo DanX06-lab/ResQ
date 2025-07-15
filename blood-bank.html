@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResQ - Blood Bank Search</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/blood-bank.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 767px)">
+    <link rel="stylesheet" href="styles/tablet.css" media="screen and (min-width: 768px) and (max-width: 1024px)">
+    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 1025px)">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">ResQ</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="blood-bank.html">Blood Bank</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#emergency">Emergency</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+    <section class="blood-bank-hero d-flex align-items-center">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-4">Find Blood Donors</h1>
+            <p class="lead mb-5">Search for blood donors by location and blood type</p>
+        </div>
+    </section>
+
+    <!-- Search Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="card shadow">
+                <div class="card-body p-4">
+                    <h2 class="fw-bold mb-4">Blood Search</h2>
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <label class="form-label">Blood Type</label>
+                                <select class="form-select">
+                                    <option value="">All Types</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Location</label>
+                                <input type="text" class="form-control" placeholder="City or Area">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Search Radius</label>
+                                <select class="form-select">
+                                    <option>5 km</option>
+                                    <option>10 km</option>
+                                    <option>25 km</option>
+                                    <option>50 km</option>
+                                    <option>100 km</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-danger mt-4">
+                            <i class="fas fa-search me-2"></i>Search Donors
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donor Listings -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Available Donors</h2>
+            <div class="row g-4" id="donor-results">
+                <!-- Donor cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Become a Donor -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Become a Blood Donor</h2>
+                    <p class="lead mb-4">Join our network of life-saving donors</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-check-circle text-danger me-2"></i> Help save lives in your community</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-danger me-2"></i> Get notified when your blood type is needed</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-danger me-2"></i> Receive health checkups with each donation</li>
+                    </ul>
+                    <a href="register_donor.html" class="btn btn-outline-danger mt-3">Register as Donor</a>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0">
+                    <img src="images/blood-donation.jpg" alt="Blood donation" class="img-fluid rounded shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="fw-bold mb-3">ResQ Blood Bank</h5>
+                    <p>Connecting donors with those in need since 2023.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="blood-bank.html" class="text-white text-decoration-none">Blood Bank</a></li>
+                        <li class="mb-2"><a href="index.html#emergency" class="text-white text-decoration-none">Emergency</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-bold mb-3">Contact</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> Blood Bank Helpline: +91 7980668639</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> bloodbank@resq.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 ResQ Blood Bank. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/blood-bank.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* Desktop styles (width > 1024px) */
+body {
+  font-size: 18px;
+  padding: 20px;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Add desktop-specific styles here */
