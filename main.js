@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const ringPoliceBtn = document.getElementById('ringPoliceBtn');
     // Connect to Socket.IO backend
-    const socket = io('http://localhost:3000');
+    const socket = io('https://resq-yc11.onrender.com');
 
     if (ringPoliceBtn) {
         ringPoliceBtn.addEventListener('click', function () {
